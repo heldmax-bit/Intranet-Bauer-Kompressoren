@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bauer Kompressoren Intranet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="home">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">BK</div>
+      <div>
+        <p class="eyebrow">Bauer Kompressoren</p>
+        <h1>Intranet</h1>
+      </div>
+    </div>
+
+    <nav class="topnav" aria-label="Hauptnavigation">
+      <a href="#departments">Abteilungen</a>
+      <a href="#focus">Im Fokus</a>
+      <a href="#tools">Schnellzugriffe</a>
+      <a href="#feedback">Feedback</a>
+    </nav>
+
+    <div class="profile-card">
+      <span class="status-dot"></span>
+      <div>
+        <strong id="current-user-name">Mitarbeitende</strong>
+        <p id="current-user-role">Bauer Kompressoren Intranet</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="brand-banner" aria-label="Unternehmensmarke">
+      <div class="brand-banner-copy">
+        <p class="eyebrow">Unternehmensportal</p>
+        <h2>Bauer Kompressoren Intranet</h2>
+        <p>Zentrale Kommunikationsseite fuer Informationen, Bereiche und taegliche Schnellzugriffe.</p>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Startseite</p>
+        <h2>Kommunikation aus allen Abteilungen an einem Ort.</h2>
+        <p>
+          Auf dieser Startseite laufen die wichtigsten Informationen aus Technik,
+          Sales, Produktion, Academy, Sicherheit, Marketing, HR und Betriebsrat
+          im Bereich <strong>Im Fokus</strong> zusammen.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#departments">Abteilungen oeffnen</a>
+          <a class="button secondary" href="#focus">Im Fokus ansehen</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel hero-visual">
+        <div class="hero-visual-copy">
+          <p class="eyebrow">Quality. Our DNA</p>
+          <h3>Jede Abteilung hat ihre eigene Kommunikationsseite.</h3>
+          <p>
+            Neue Meldungen werden direkt aus dem jeweiligen Bereich verfasst
+            und erscheinen gesammelt auf dieser Startseite im Fokus-Feed.
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="content-grid">
+      <div class="main-column">
+        <section id="focus" class="card compact focus-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Im Fokus</p>
+              <h3>Nachrichten aus den Abteilungen</h3>
+            </div>
+          </div>
+          <p class="focus-note">
+            Neue Meldungen werden auf den Abteilungsseiten verfasst und erscheinen gesammelt nur hier.
+          </p>
+          <div id="focus-feed" class="focus-feed"></div>
+          <p id="focus-empty" class="focus-empty" hidden>Noch keine Meldungen im Fokus.</p>
+        </section>
+
+        <section id="departments" class="card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Organisation</p>
+              <h3>Abteilungen</h3>
+            </div>
+          </div>
+
+          <div class="department-grid">
+            <a href="department.html?dept=technik" class="department-tile">
+              <span class="department-icon" aria-hidden="true">⚙️</span>
+              <strong>Technik</strong>
+              <span>Systeme, Infrastruktur und technischer Support</span>
+            </a>
+            <a href="department.html?dept=sales" class="department-tile">
+              <span class="department-icon" aria-hidden="true">🤝</span>
+              <strong>Sales</strong>
+              <span>Vertrieb, Kundenkommunikation und Marktaktivitaeten</span>
+            </a>
+            <a href="department.html?dept=produktion" class="department-tile">
+              <span class="department-icon" aria-hidden="true">🏭</span>
+              <strong>Produktion</strong>
+              <span>Fertigung, Prozesse, Auslastung und operative Planung</span>
+            </a>
+            <a href="department.html?dept=academy" class="department-tile">
+              <span class="department-icon" aria-hidden="true">🎓</span>
+              <strong>Academy</strong>
+              <span>Weiterbildung, Schulungen und Wissensentwicklung</span>
+            </a>
+            <a href="department.html?dept=sicherheit" class="department-tile">
+              <span class="department-icon" aria-hidden="true">🛡️</span>
+              <strong>Sicherheit</strong>
+              <span>Arbeitsschutz, Compliance und Sicherheitsinformationen</span>
+            </a>
+            <a href="department.html?dept=marketing" class="department-tile">
+              <span class="department-icon" aria-hidden="true">📣</span>
+              <strong>Marketing</strong>
+              <span>Kampagnen, Kommunikation, Inhalte und Markenauftritt</span>
+            </a>
+            <a href="department.html?dept=hr-geschaeftsfuehrung" class="department-tile">
+              <span class="department-icon" aria-hidden="true">👔</span>
+              <strong>HR &amp; Geschaeftsfuehrung</strong>
+              <span>Personalthemen, Fuehrung, Richtlinien und Unternehmensinfos</span>
+            </a>
+            <a href="department.html?dept=betriebsrat" class="department-tile">
+              <span class="department-icon" aria-hidden="true">🗳️</span>
+              <strong>Betriebsrat</strong>
+              <span>Ansprechpartner, Hinweise und Mitbestimmung im Unternehmen</span>
+            </a>
+          </div>
+        </section>
+
+        <section id="tools" class="card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Schnellzugriff</p>
+              <h3>Wichtige Tools</h3>
+            </div>
+          </div>
+
+          <div class="quick-links">
+            <a href="#tools" class="quick-link">
+              <strong>Urlaubsantrag</strong>
+              <span>Direkt zum HR-Servicecenter</span>
+            </a>
+            <a href="#tools" class="quick-link">
+              <strong>IT Support</strong>
+              <span>Tickets, Hilfe und technische Anfragen</span>
+            </a>
+            <a href="#tools" class="quick-link">
+              <strong>Organigramm</strong>
+              <span>Teams, Verantwortungen und Kontakte</span>
+            </a>
+            <a href="#tools" class="quick-link">
+              <strong>Brand Portal</strong>
+              <span>Vorlagen, Logos und Kommunikationsmaterial</span>
+            </a>
+            <a href="#tools" class="quick-link">
+              <strong>Reisekosten</strong>
+              <span>Formulare, Richtlinien und Abrechnung</span>
+            </a>
+            <a href="#tools" class="quick-link">
+              <strong>Wissensdatenbank</strong>
+              <span>Prozesse, FAQ und interne Leitfaeden</span>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <aside class="sidebar">
+        <section id="feedback" class="card compact accent-card">
+          <p class="eyebrow">Mitarbeitende</p>
+          <h3>Feedback zur Startseite</h3>
+          <p>
+            Teile Ideen fuer weitere Inhalte, Links oder Abteilungsseiten mit dem
+            Intranet-Team von Bauer Kompressoren.
+          </p>
+          <a class="button primary full-width" href="#feedback">Feedback senden</a>
+        </section>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

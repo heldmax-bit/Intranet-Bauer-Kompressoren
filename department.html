@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abteilung | Bauer Kompressoren Intranet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="department">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">BK</div>
+      <div>
+        <p class="eyebrow">Bauer Kompressoren</p>
+        <h1>Intranet</h1>
+      </div>
+    </div>
+
+    <nav class="topnav" aria-label="Hauptnavigation">
+      <a href="index.html">Startseite</a>
+      <a href="#communication">Kommunikationsseite</a>
+      <a href="#compose">Neue Nachricht</a>
+      <a href="index.html#focus">Im Fokus</a>
+    </nav>
+
+    <div class="profile-card">
+      <span class="status-dot"></span>
+      <div>
+        <strong id="current-user-name">Mitarbeitende</strong>
+        <p id="current-user-role">Bauer Kompressoren Intranet</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="brand-banner" aria-label="Unternehmensmarke">
+      <div class="brand-banner-copy">
+        <p class="eyebrow">Kommunikationsseite</p>
+        <h2 id="department-banner-title">Abteilung</h2>
+        <p id="department-banner-copy">Informationen und Kommunikation aus dem Bereich.</p>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow" id="department-page-label">Abteilung</p>
+        <h2 id="department-page-title">Bereich</h2>
+        <p id="department-page-description">
+          Diese Seite buendelt die Kommunikation, Themen und Meldungen der Abteilung.
+        </p>
+        <div class="hero-actions">
+          <button class="button primary" id="compose-toggle" type="button">Neue Nachricht schreiben</button>
+          <a class="button secondary" href="index.html#focus">Im Fokus ansehen</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel hero-visual">
+        <div class="hero-visual-copy">
+          <p class="eyebrow">Abteilungsinfo</p>
+          <h3 id="department-panel-title">Kommunikation aus dem Bereich</h3>
+          <p id="department-panel-copy">
+            Meldungen dieser Seite erscheinen gesammelt im Bereich Im Fokus auf der Startseite.
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="department-layout">
+      <div class="page-main">
+        <section id="communication" class="card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Aus dem Bereich</p>
+              <h3>Kommunikationsseite</h3>
+            </div>
+          </div>
+          <div id="department-highlights" class="info-stack"></div>
+        </section>
+
+        <section id="compose" class="card compose-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Nachricht verfassen</p>
+              <h3 id="compose-title">Neue Meldung</h3>
+            </div>
+          </div>
+          <p class="compose-note">
+            Diese Nachricht wird nur im Bereich <strong>Im Fokus</strong> auf der Startseite angezeigt und mit der aktuellen Abteilung gekennzeichnet.
+          </p>
+          <form id="department-message-form" class="message-form" hidden>
+            <label class="field" for="message-title">
+              <span class="field-label">Titel</span>
+              <input id="message-title" class="text-input" name="title" type="text" maxlength="80" required>
+            </label>
+
+            <label class="field" for="message-content">
+              <span class="field-label">Nachricht</span>
+              <textarea id="message-content" class="text-area" name="content" maxlength="320" required></textarea>
+            </label>
+
+            <div class="compose-actions">
+              <button class="button primary" type="submit">Nachricht an Im Fokus senden</button>
+              <button class="button secondary" id="compose-cancel" type="button">Schliessen</button>
+            </div>
+
+            <p class="inline-note" id="compose-help">
+              Nach dem Senden wirst du direkt zur Startseite in den Bereich Im Fokus gefuehrt.
+            </p>
+            <p class="status-message" id="message-status" aria-live="polite"></p>
+          </form>
+        </section>
+      </div>
+
+      <aside class="page-sidebar">
+        <section class="card compact">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Themen</p>
+              <h3>Im Ueberblick</h3>
+            </div>
+          </div>
+          <div id="department-topics" class="topic-list"></div>
+        </section>
+
+        <section class="card compact accent-card">
+          <p class="eyebrow">Verbindung</p>
+          <h3>Zurueck zur Startseite</h3>
+          <p>
+            Alle aus dieser Seite verfassten Nachrichten werden im zentralen Fokus-Bereich des Intranets gesammelt.
+          </p>
+          <a class="button primary full-width" href="index.html#focus">Im Fokus oeffnen</a>
+        </section>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>
